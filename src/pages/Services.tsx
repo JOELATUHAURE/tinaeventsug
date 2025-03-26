@@ -1,6 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Tent, PartyPopper, CalendarClock, Users, Music, UtensilsCrossed } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom"; // ✅ Add this import
+import { motion } from "framer-motion";
+import { Tent, PartyPopper, CalendarClock, Users, Music, UtensilsCrossed } from "lucide-react";
+
 
 const Services = () => {
   const services = [
@@ -138,12 +140,13 @@ const Services = () => {
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss how we can help make your special occasion truly unforgettable.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200"
-          >
-            Get Your Free Quote
-          </a>
+         <Link
+  to="/contact"
+  className="inline-block bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200"
+>
+  Get Your Free Quote
+</Link>
+
         </motion.div>
       </div>
     </div>
