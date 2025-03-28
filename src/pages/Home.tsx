@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Calendar, Award } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper
-import 'swiper/swiper-bundle.min.css'; // Import Swiper styles
+import 'swiper/css';  
+import 'swiper/css/navigation';  
+import 'swiper/css/pagination';  
+
 
 const Home = () => {
   return (
