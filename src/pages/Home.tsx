@@ -1,13 +1,59 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Helmet } from "react-helmet-async";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Calendar, Award } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper
-import 'swiper/swiper-bundle.min.css'; // Import Swiper styles
+import { Swiper, SwiperSlide } from 'swiper/react'; 
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';  
+import 'swiper/css/navigation';  
+import 'swiper/css/pagination';
+
 
 const Home = () => {
+  const swiperRef = useRef(null);
+
+ const handleSlideChange = () => {
+    if (swiperRef.current) {
+      const iframes = document.querySelectorAll('.youtube-video');
+      iframes.forEach((iframe) => {
+        const src = iframe.src;
+        iframe.src = src; // Reset the src to stop playback
+      });
+    }
+  };
+
   return (
+   
     <div className="pt-20">
+       {/* SEO Metadata */}
+      <Helmet>
+        <title>TINAH Events | Luxury Event Planning in Mbarara</title>
+        <meta
+          name="description"
+          content="Premium event planning, luxury decorations, and mega tents for your special occasions in Mbarara, Uganda."
+        />
+        <meta
+          name="keywords"
+          content="event planning, luxury decorations, mega tents, wedding decor, corporate events, Mbarara Uganda"
+        />
+        <meta name="author" content="TINAH Events" />
+        <meta
+          property="og:title"
+          content="TINAH Events | Luxury Event Planning in Mbarara"
+        />
+        <meta
+          property="og:description"
+          content="Transform your event with premium decorations and expert planning in Mbarara."
+        />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/path-to-image.jpg"
+        />
+        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center">
         <div className="absolute inset-0">
@@ -34,7 +80,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
           >
-            Premium event planning, luxury decorations, and state-of-the-art mega tents for your special occasions
+            Premium event planning, luxury decorations, and state-of-the-art mega tents for your special occasions.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,24 +88,17 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <Link
-              to="/contact"
-              className="bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200 flex items-center justify-center"
-            >
+            <Link to="/contact" className="bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200 flex items-center justify-center">
               Get Your Free Quote <ArrowRight className="ml-2" />
             </Link>
-            <Link
-              to="/gallery"
-              className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
-            >
+            <Link to="/gallery" className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
               View Our Work
             </Link>
           </motion.div>
         </div>
       </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
+      
+<section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -159,8 +198,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* YouTube Video Slider Section */}
+       {/* YouTube Video Slider Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -171,34 +209,41 @@ const Home = () => {
           </div>
 
           {/* Swiper Carousel for YouTube Videos */}
-          <Swiper>
-  <SwiperSlide>
-    <iframe
-      width="100%"
-      height="315"
-      src="https://www.youtube.com/embed/13Fd-vOIm5k"
-      title="YouTube video"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </SwiperSlide>
-  
-  <SwiperSlide>
-    <iframe
-      width="100%"
-      height="315"
-      src="https://www.youtube.com/embed/G2k05Slr7ys"
-      title="YouTube video"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </SwiperSlide>
-
-  {/* Repeat the SwiperSlide for additional videos */}
-</Swiper>
-
+          <Swiper
+            ref={swiperRef}
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            onSlideChange={handleSlideChange} // Pause previous video on slide change
+          >
+            <SwiperSlide>
+              <iframe
+                className="youtube-video"
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/13Fd-vOIm5k"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </SwiperSlide>
+            
+            <SwiperSlide>
+              <iframe
+                className="youtube-video"
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/G2k05Slr7ys"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
     </div>
