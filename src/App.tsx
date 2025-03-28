@@ -9,6 +9,9 @@ import Gallery from './pages/Gallery';
 import Videos from './pages/Videos';
 import Contact from './pages/Contact';
 
+// Import Swiper CSS here
+import 'swiper/swiper-bundle.min.css';
+
 function App() {
   return (
     <Router>
