@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Tent } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import logo from '../images/tinalogo2-Photoroom.png'; // Import the logo
 
 const Navbar = () => {
@@ -23,14 +23,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-           <Link to="/" className="flex items-center space-x-2">
-  <img 
-    src={logo} 
-    alt="Tinah Events Logo" 
-    className="h-12 w-auto"
-  />
-  <span className="text-2xl font-bold text-gray-900">Tinah Events</span>
-</Link>
+            <Link to="/" className="flex items-center space-x-2">
+              <img src={logo} alt="Tinah Events Logo" className="h-12 w-auto" />
+              <span className="text-2xl font-bold text-gray-900">Tinah Events</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
