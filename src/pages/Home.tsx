@@ -24,6 +24,18 @@ const Home = () => {
   };
 
   return (
+    <Helmet>
+  <title>TINAH Events | Luxury Event Planning in Mbarara</title>
+  <meta name="description" content="Premium event planning, luxury decorations, and mega tents for your special occasions in Mbarara, Uganda." />
+  <meta name="keywords" content="event planning, luxury decorations, mega tents, wedding decor, corporate events, Mbarara Uganda" />
+  <meta name="author" content="TINAH Events" />
+  <meta property="og:title" content="TINAH Events | Luxury Event Planning in Mbarara" />
+  <meta property="og:description" content="Transform your event with premium decorations and expert planning in Mbarara." />
+  <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg" />
+  <meta property="og:url" content="https://yourwebsite.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
+
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center">
