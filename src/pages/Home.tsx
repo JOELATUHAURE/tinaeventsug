@@ -2,10 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Calendar, Award } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper
+import { Swiper, SwiperSlide } from 'swiper/react'; 
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'; // Import modules
 import 'swiper/css';  
 import 'swiper/css/navigation';  
-import 'swiper/css/pagination';  
+import 'swiper/css/pagination';
 
 
 const Home = () => {
@@ -174,7 +175,15 @@ const Home = () => {
           </div>
 
           {/* Swiper Carousel for YouTube Videos */}
-          <Swiper>
+         
+<Swiper
+  modules={[Navigation, Pagination, Autoplay]} // Register modules
+  spaceBetween={20}
+  slidesPerView={1} // One video per slide
+  navigation // Enable navigation arrows
+  pagination={{ clickable: true }} // Enable pagination dots
+  autoplay={{ delay: 3000, disableOnInteraction: false }} // Auto-slide every 3 sec
+>
   <SwiperSlide>
     <iframe
       width="100%"
@@ -198,10 +207,7 @@ const Home = () => {
       allowFullScreen
     ></iframe>
   </SwiperSlide>
-
-  {/* Repeat the SwiperSlide for additional videos */}
 </Swiper>
-
         </div>
       </section>
     </div>
