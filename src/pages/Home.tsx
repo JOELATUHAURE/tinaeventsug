@@ -3,18 +3,22 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Calendar, Award } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react'; 
-import { Navigation, Pagination } from 'swiper/modules'; // Removed autoplay
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';  
 import 'swiper/css/navigation';  
 import 'swiper/css/pagination';
 
+
 const Home = () => {
   const swiperRef = useRef(null);
 
-  // Function to move to next slide when video ends
-  const handleVideoEnd = () => {
+ const handleSlideChange = () => {
     if (swiperRef.current) {
-      swiperRef.current.slideNext();
+      const iframes = document.querySelectorAll('.youtube-video');
+      iframes.forEach((iframe) => {
+        const src = iframe.src;
+        iframe.src = src; // Reset the src to stop playback
+      });
     }
   };
 
@@ -164,7 +168,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* YouTube Video Slider */}
+       {/* YouTube Video Slider Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -176,15 +180,17 @@ const Home = () => {
 
           {/* Swiper Carousel for YouTube Videos */}
           <Swiper
+            ref={swiperRef}
             modules={[Navigation, Pagination]}
             spaceBetween={20}
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            onSwiper={(swiper) => (swiperRef.current = swiper)} // Store Swiper instance
+            onSlideChange={handleSlideChange} // Pause previous video on slide change
           >
             <SwiperSlide>
               <iframe
+                className="youtube-video"
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/13Fd-vOIm5k"
@@ -192,12 +198,12 @@ const Home = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                onEnded={handleVideoEnd} // Slide next when video ends
               ></iframe>
             </SwiperSlide>
-
+            
             <SwiperSlide>
               <iframe
+                className="youtube-video"
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/G2k05Slr7ys"
@@ -205,7 +211,6 @@ const Home = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                onEnded={handleVideoEnd} // Slide next when video ends
               ></iframe>
             </SwiperSlide>
           </Swiper>
