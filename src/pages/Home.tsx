@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Calendar, Award } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper
+import 'swiper/swiper-bundle.min.css'; // Import Swiper styles
 
 const Home = () => {
   return (
@@ -155,6 +157,48 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* YouTube Video Slider Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our YouTube Videos</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Watch our event planning videos, featuring behind-the-scenes footage and client testimonials.
+            </p>
+          </div>
+
+          {/* Swiper Carousel for YouTube Videos */}
+          <Swiper>
+  <SwiperSlide>
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/13Fd-vOIm5k"
+      title="YouTube video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </SwiperSlide>
+  
+  <SwiperSlide>
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/G2k05Slr7ys"
+      title="YouTube video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </SwiperSlide>
+
+  {/* Repeat the SwiperSlide for additional videos */}
+</Swiper>
+
         </div>
       </section>
     </div>
