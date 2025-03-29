@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
-import { BrandTiktok } from 'lucide-react';
+import { Tiktok } from 'lucide-react';
+
 
 const Footer = () => {
   return (
@@ -76,8 +77,9 @@ const Footer = () => {
                 <Youtube className="h-6 w-6" />
               </a>
               <a href="https://www.tiktok.com/@tinaheventsug01?_t=ZM-8v5knI4x9lN&_r=1" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <BrandTiktok className="h-6 w-6" />
-              </a>
+  <Tiktok className="h-6 w-6" />
+</a>
+
             </div>
           </div>
         </div>
