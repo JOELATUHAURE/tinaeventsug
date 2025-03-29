@@ -24,7 +24,7 @@ const Contact = () => {
       Number of Guests: ${formData.guests}
       Message: ${formData.message}
     `);
-    window.open(`https://wa.me/256780844955?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/256776664958?text=${whatsappMessage}`, '_blank');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -54,8 +54,8 @@ const Contact = () => {
                 <Phone className="h-6 w-6 text-purple-600" />
                 <div>
                   <h3 className="font-semibold text-gray-900">Phone</h3>
-                  <a href="tel:+256780844955" className="text-gray-600 hover:text-purple-600">
-                    +256 780 844 955
+                  <a href="tel:+256776664958" className="text-gray-600 hover:text-purple-600">
+                    ++256 776 664958
                   </a>
                 </div>
               </div>
@@ -64,8 +64,8 @@ const Contact = () => {
                 <Mail className="h-6 w-6 text-purple-600" />
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
-                  <a href="mailto:info@tinahevents.com" className="text-gray-600 hover:text-purple-600">
-                    info@tinahevents.com
+                  <a href="mailto:info@tinaheventsug.com" className="text-gray-600 hover:text-purple-600">
+                    info@tinaheventsug.com
                   </a>
                 </div>
               </div>
