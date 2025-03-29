@@ -106,7 +106,7 @@ const Videos = () => {
             Subscribe to our YouTube channel for more event highlights and behind-the-scenes content.
           </p>
           <a
-            href="https://youtube.com"
+            href="https://youtube.com/@tinaheventsug?si=rqTx3E4qmT8V4kiK"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200"
