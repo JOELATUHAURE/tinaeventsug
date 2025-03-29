@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { BrandTiktok } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -45,14 +46,14 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-purple-400" />
-                <a href="tel:+256780844955" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  +256 780 844 955
+                <a href="tel:+256776664958" className="text-gray-400 hover:text-purple-400 transition-colors">
+                  +256776664958
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-purple-400" />
-                <a href="mailto:info@tinahevents.com" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  info@tinahevents.com
+                <a href="mailto:info@tinaheventsug.com" className="text-gray-400 hover:text-purple-400 transition-colors">
+                  info@tinaheventsug.com
                 </a>
               </li>
               <li className="flex items-center space-x-3">
@@ -65,14 +66,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.facebook.com/p/Tinah-Decor-and-Events-100040569746040/" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.youtube.com/channel/UCH52pjTra4DrRROLPBdZdQg" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Youtube className="h-6 w-6" />
+              </a>
+              <a href="https://www.tiktok.com/@tinaheventsug01?_t=ZM-8v5knI4x9lN&_r=1" className="text-gray-400 hover:text-purple-400 transition-colors">
+                <BrandTiktok className="h-6 w-6" />
               </a>
             </div>
           </div>
