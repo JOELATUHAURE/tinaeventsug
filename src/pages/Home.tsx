@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import { Helmet } from "react-helmet-async";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Users, Calendar, Award } from 'lucide-react';
+import { ArrowRight, Star, Users, Calendar, Award, Quote } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react'; 
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';  
 import 'swiper/css/navigation';  
 import 'swiper/css/pagination';
@@ -263,6 +263,93 @@ const Home = () => {
           </Swiper>
         </div>
       </section>
+
+{/* Customer Reviews Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Hear from our happy clients about their unforgettable experiences with TINAH Events.
+            </p>
+          </div>
+
+          {/* Swiper Carousel for Customer Reviews */}
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+          >
+            {/* Review 1 */}
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                <Quote className="text-purple-600 h-8 w-8 mb-4" />
+                <p className="text-gray-600 text-lg italic">
+                  "TINAH Events transformed my wedding into a dream! Their decorations and organization were flawless."
+                </p>
+                <div className="mt-4 flex items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Customer"
+                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
+                  />
+                  <div className="ml-3 text-left">
+                    <h4 className="text-lg font-semibold text-gray-900">Sarah K.</h4>
+                    <p className="text-sm text-gray-600">Bride</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Review 2 */}
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                <Quote className="text-purple-600 h-8 w-8 mb-4" />
+                <p className="text-gray-600 text-lg italic">
+                  "They exceeded my expectations! Our corporate event looked absolutely stunning. Will book again!"
+                </p>
+                <div className="mt-4 flex items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Customer"
+                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
+                  />
+                  <div className="ml-3 text-left">
+                    <h4 className="text-lg font-semibold text-gray-900">Michael O.</h4>
+                    <p className="text-sm text-gray-600">Event Manager</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Review 3 */}
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                <Quote className="text-purple-600 h-8 w-8 mb-4" />
+                <p className="text-gray-600 text-lg italic">
+                  "I was amazed by the attention to detail in my birthday decor. TINAH Events made it extra special!"
+                </p>
+                <div className="mt-4 flex items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/60.jpg"
+                    alt="Customer"
+                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
+                  />
+                  <div className="ml-3 text-left">
+                    <h4 className="text-lg font-semibold text-gray-900">Emily R.</h4>
+                    <p className="text-sm text-gray-600">Birthday Celebrant</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+          </Swiper>
+        </div>
+      </section>
+      
     </div>
   );
 };
