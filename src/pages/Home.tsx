@@ -397,7 +397,7 @@ const Home = () => {
       <iframe
         title="TINAH DECOR EVENTS LOCATION"
         className="w-full h-full rounded-lg shadow-lg"
-        src="https://maps.app.goo.gl/kNqFL2woDG2rXbsY8?g_st=aw"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.28329748242!2d30.663186!3d-0.605376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x862dc37423a862bb%3A0x76f2cc334dafd161!2sTINAH%20DECOR%20EVENTS!5e0!3m2!1sen!2sug!4vXXXXXXXXXXXX"
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
