@@ -65,49 +65,55 @@ const Home = () => {
         <link rel="canonical" href="https://tinaheventsug.com/" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80"
-            alt="Luxury Event Setup"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
+     {/* Hero Section */}
+<section className="relative h-screen flex items-center">
+  <div className="absolute inset-0">
+    <video
+      className="w-full h-full object-cover"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="/videos/bg-video-tinah.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
-            Creating Unforgettable Events in Mbarara
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
-          >
-            Premium event planning, luxury decorations, and state-of-the-art mega tents for your special occasions.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row justify-center gap-4"
-          >
-            <Link to="/contact" className="bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200 flex items-center justify-center">
-              Get Your Free Quote <ArrowRight className="ml-2" />
-            </Link>
-            <Link to="/gallery" className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
-              View Our Work
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-4xl md:text-6xl font-bold text-white mb-6"
+    >
+      Creating Unforgettable Events in Mbarara
+    </motion.h1>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
+    >
+      Premium event planning, luxury decorations, and state-of-the-art mega tents for your special occasions.
+    </motion.p>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="flex flex-col sm:flex-row justify-center gap-4"
+    >
+      <Link to="/contact" className="bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-200 flex items-center justify-center">
+        Get Your Free Quote <ArrowRight className="ml-2" />
+      </Link>
+      <Link to="/gallery" className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+        View Our Work
+      </Link>
+    </motion.div>
+  </div>
+</section>
+
       
 <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
