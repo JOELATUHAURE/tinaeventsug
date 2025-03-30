@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
 const Videos = () => {
+  const [currentPlaying, setCurrentPlaying] = useState<number | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
   const videos = [
     { src: "/videos/luxury.mp4", title: "Luxury Wedding Highlights", description: "A stunning celebration of love and elegance" },
     { src: "/videos/cooperate.mp4", title: "Corporate Event Setup", description: "Behind the scenes of our premium event setup" },
@@ -11,6 +14,13 @@ const Videos = () => {
     { src: "/videos/mega-tent-install.mp4", title: "Mega Tent Installation", description: "Watch our team in action" },
     { src: "/videos/decoration-showcase.mp4", title: "Decoration Showcase", description: "Our finest decoration work" },
   ];
+
+  const handlePlay = (index: number) => {
+    if (currentPlaying !== null && currentPlaying !== index) {
+      videoRefs.current[currentPlaying]?.pause();
+    }
+    setCurrentPlaying(index);
+  };
 
   return (
     <div className="pt-20">
@@ -52,8 +62,10 @@ const Videos = () => {
             >
               <div className="relative w-full h-56 sm:h-64 lg:h-72">
                 <video
+                  ref={(el) => (videoRefs.current[index] = el)}
                   src={video.src}
                   controls
+                  onPlay={() => handlePlay(index)}
                   className="absolute inset-0 w-full h-full object-cover rounded-t-lg"
                 ></video>
               </div>
