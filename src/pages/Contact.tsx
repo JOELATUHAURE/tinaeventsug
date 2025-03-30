@@ -133,6 +133,7 @@ const Contact = () => {
                 >
                   <option value="">Select Event Type</option>
                   <option value="wedding">Wedding</option>
+                   <option value="introduction">Introduction & Give Away</option>
                   <option value="corporate">Corporate Event</option>
                   <option value="birthday">Birthday Party</option>
                   <option value="graduation">Graduation Party</option>
