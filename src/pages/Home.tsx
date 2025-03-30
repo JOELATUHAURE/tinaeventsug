@@ -284,67 +284,100 @@ const Home = () => {
             autoplay={{ delay: 5000, disableOnInteraction: false }}
           >
             {/* Review 1 */}
-            <SwiperSlide>
-              <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
-                <Quote className="text-purple-600 h-8 w-8 mb-4" />
-                <p className="text-gray-600 text-lg italic">
-                  "TINAH Events transformed my wedding into a dream! Their decorations and organization were flawless."
-                </p>
-                <div className="mt-4 flex items-center">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
-                    alt="Customer"
-                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
-                  />
-                  <div className="ml-3 text-left">
-                    <h4 className="text-lg font-semibold text-gray-900">Sarah K.</h4>
-                    <p className="text-sm text-gray-600">Bride</p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+          
 
-            {/* Review 2 */}
-            <SwiperSlide>
-              <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
-                <Quote className="text-purple-600 h-8 w-8 mb-4" />
-                <p className="text-gray-600 text-lg italic">
-                  "They exceeded my expectations! Our corporate event looked absolutely stunning. Will book again!"
-                </p>
-                <div className="mt-4 flex items-center">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
-                    alt="Customer"
-                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
-                  />
-                  <div className="ml-3 text-left">
-                    <h4 className="text-lg font-semibold text-gray-900">Michael O.</h4>
-                    <p className="text-sm text-gray-600">Event Manager</p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+<SwiperSlide>
+  <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+    <Quote className="text-purple-600 h-8 w-8 mb-4" />
+    <p className="text-gray-600 text-lg italic">
+      TINAH Events transformed my wedding into a dream! Their decorations and organization were flawless.
+    </p>
+    <div className="mt-4 flex items-center justify-center">
+      {/* Star rating */}
+      <div className="flex text-yellow-400">
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9734;</span>
+      </div>
+    </div>
+    <div className="mt-4 flex items-center">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1723204814857-f72033f99e30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjBtYW4lMjBwcm9maWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D"
+        alt="Customer"
+        className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
+      />
+      <div className="ml-3 text-left">
+        <h4 className="text-lg font-semibold text-gray-900">Andrew Tumwesigye</h4>
+        <p className="text-sm text-gray-600">Bride</p>
+      </div>
+    </div>
+  </div>
+</SwiperSlide>
 
-            {/* Review 3 */}
-            <SwiperSlide>
-              <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
-                <Quote className="text-purple-600 h-8 w-8 mb-4" />
-                <p className="text-gray-600 text-lg italic">
-                  "I was amazed by the attention to detail in my birthday decor. TINAH Events made it extra special!"
-                </p>
-                <div className="mt-4 flex items-center">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/60.jpg"
-                    alt="Customer"
-                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
-                  />
-                  <div className="ml-3 text-left">
-                    <h4 className="text-lg font-semibold text-gray-900">Emily R.</h4>
-                    <p className="text-sm text-gray-600">Birthday Celebrant</p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+{/* Review 2 */}
+<SwiperSlide>
+  <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+    <Quote className="text-purple-600 h-8 w-8 mb-4" />
+    <p className="text-gray-600 text-lg italic">
+      They exceeded my expectations! Our corporate event looked absolutely stunning. Will book again.
+    </p>
+    <div className="mt-4 flex items-center justify-center">
+      {/* Star rating */}
+      <div className="flex text-yellow-400">
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+      </div>
+    </div>
+    <div className="mt-4 flex items-center">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1690579805273-fd0c7b08035d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjB3b21hbiUyMHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+        alt="Customer"
+        className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
+      />
+      <div className="ml-3 text-left">
+        <h4 className="text-lg font-semibold text-gray-900">Judith Kyomuhendo</h4>
+        <p className="text-sm text-gray-600">Event Manager</p>
+      </div>
+    </div>
+  </div>
+</SwiperSlide>
+
+{/* Review 3 */}
+<SwiperSlide>
+  <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+    <Quote className="text-purple-600 h-8 w-8 mb-4" />
+    <p className="text-gray-600 text-lg italic">
+      I was amazed by the attention to detail in my birthday decor. TINAH Events made it extra special.
+    </p>
+    <div className="mt-4 flex items-center justify-center">
+      {/* Star rating */}
+      <div className="flex text-yellow-400">
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9733;</span>
+        <span className="text-xl">&#9734;</span>
+        <span className="text-xl">&#9734;</span>
+      </div>
+    </div>
+    <div className="mt-4 flex items-center">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1703383114227-9381a60af563?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjB3b21hbiUyMHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+        alt="Customer"
+        className="w-12 h-12 rounded-full object-cover border-2 border-purple-600"
+      />
+      <div className="ml-3 text-left">
+        <h4 className="text-lg font-semibold text-gray-900">Felista Namukwaya</h4>
+        <p className="text-sm text-gray-600">Birthday Celebrant</p>
+      </div>
+    </div>
+  </div>
+</SwiperSlide>
+
 
           </Swiper>
         </div>
