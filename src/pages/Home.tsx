@@ -27,7 +27,7 @@ const Home = () => {
    
     <div className="pt-20">
        {/* SEO Metadata */}
-      <Helmet>
+    <Helmet>
         <title>TINAH Events | Luxury Event Planning in Mbarara</title>
         <meta
           name="description"
@@ -38,6 +38,8 @@ const Home = () => {
           content="event planning, luxury decorations, mega tents, wedding decor, corporate events, Mbarara Uganda"
         />
         <meta name="author" content="TINAH Events" />
+        
+        {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
           content="TINAH Events | Luxury Event Planning in Mbarara"
@@ -48,10 +50,19 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://yourwebsite.com/path-to-image.jpg"
+          content="https://tinaheventsug.com/images/banner.jpg"
         />
-        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:url" content="https://tinaheventsug.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TINAH Events | Luxury Event Planning in Mbarara" />
+        <meta name="twitter:description" content="Luxury event planning, decorations, and mega tents for special occasions in Mbarara, Uganda." />
+        <meta name="twitter:image" content="https://tinaheventsug.com/images/banner.jpg" />
+
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://tinaheventsug.com/" />
       </Helmet>
 
       {/* Hero Section */}
