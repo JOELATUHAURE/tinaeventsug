@@ -397,7 +397,7 @@ const Home = () => {
       <iframe
         title="TINAH DECOR EVENTS LOCATION"
         className="w-full h-full rounded-lg shadow-lg"
-        src="https://www.google.com/maps/dir//10+Mbaguta+St,+Mbarara/@-0.6053754,30.580784,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x862dc37423a862bb:0x76f2cc334dafd161!2m2!1d30.663186!2d-0.605376!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D"
+        src="https://maps.app.goo.gl/kNqFL2woDG2rXbsY8?g_st=aw"
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
