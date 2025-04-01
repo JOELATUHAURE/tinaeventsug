@@ -67,7 +67,7 @@ const About = () => {
                 Founded in Mbarara, Uganda, Tinah Events has grown from a small local business into the region's premier event management company. Our journey began with a simple vision: to create extraordinary experiences that leave lasting impressions.
               </p>
               <p>
-                With over 5 years of experience in the events industry, we've successfully orchestrated hundreds of memorable celebrations, from intimate gatherings to grand corporate functions. Our expertise in mega tents and luxury decorations has set new standards in the events industry.
+                With over 12 years of experience in the events industry, we've successfully orchestrated hundreds of memorable celebrations, from intimate gatherings to grand corporate functions. Our expertise in mega tents and luxury decorations has set new standards in the events industry.
               </p>
               <p>
                 Today, we're proud to be the trusted partner for clients seeking exceptional event experiences. Our commitment to excellence, attention to detail, and innovative approach continue to define our success.
