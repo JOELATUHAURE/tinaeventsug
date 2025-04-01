@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
-import { FaTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faTiktok } from '@fortawesome/free-brands-svg-icons';  // ✅ Corrected import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
@@ -77,7 +77,7 @@ const Footer = () => {
                 <Youtube className="h-6 w-6" />
               </a>
               <a href="https://www.tiktok.com/@yourtiktokhandle" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <FontAwesomeIcon icon={FaTiktok} className="h-6 w-6" />
+                <FontAwesomeIcon icon={faTiktok} className="h-6 w-6" />  {/* ✅ Corrected */}
               </a>
             </div>
           </div>
