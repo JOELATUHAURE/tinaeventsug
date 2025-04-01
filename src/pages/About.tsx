@@ -146,7 +146,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
-              <div className="text-4xl font-bold text-purple-600 mb-2">5+</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">12+</div>
               <div className="text-gray-600">Years Experience</div>
             </motion.div>
             <motion.div
