@@ -11,4 +11,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    minify: 'esbuild', // Enables minification
+    sourcemap: false,  // Disables source maps for better performance
+    chunkSizeWarningLimit: 1000, // Adjust chunk size warning threshold
+  },
 });
