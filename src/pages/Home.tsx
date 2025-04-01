@@ -130,7 +130,7 @@ const Home = () => {
             </div>
             <div className="text-center">
               <Calendar className="h-8 w-8 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-4xl font-bold text-gray-900 mb-2">5+</h3>
+              <h3 className="text-4xl font-bold text-gray-900 mb-2">12+</h3>
               <p className="text-gray-600">Years Experience</p>
             </div>
             <div className="text-center">
