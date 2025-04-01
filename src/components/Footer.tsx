@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
-/*
 import { FaTiktok } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-*/
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   return (
@@ -79,10 +76,9 @@ const Footer = () => {
               <a href="https://www.youtube.com/channel/UCH52pjTra4DrRROLPBdZdQg" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Youtube className="h-6 w-6" />
               </a>
-              
-     
-
-
+              <a href="https://www.tiktok.com/@yourtiktokhandle" className="text-gray-400 hover:text-purple-400 transition-colors">
+                <FontAwesomeIcon icon={FaTiktok} className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>
