@@ -70,13 +70,13 @@ const Footer = () => {
               <a href="https://www.facebook.com/p/Tinah-Decor-and-Events-100040569746040/" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.instagram.com/tinaheventsug" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
               <a href="https://www.youtube.com/channel/UCH52pjTra4DrRROLPBdZdQg" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Youtube className="h-6 w-6" />
               </a>
-              <a href="https://www.tiktok.com/@yourtiktokhandle" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.tiktok.com/@tinaheventsug01?_t=ZM-8v5knI4x9lN&_r=1" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <FontAwesomeIcon icon={faTiktok} className="h-6 w-6" />  {/* ✅ Corrected */}
               </a>
             </div>
