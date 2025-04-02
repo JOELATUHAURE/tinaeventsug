@@ -26,30 +26,30 @@
 
     <!-- Schema.org JSON-LD Structured Data for Google -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "EventVenue",
-        "name": "Tinah Events",
-        "image": "https://tinaheventsug.com/images/logo.png",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Plot 12, Kampala Road",
-          "addressLocality": "Kampala",
-          "addressRegion": "Central",
-          "postalCode": "256",
-          "addressCountry": "UG"
-        },
-        "description": "Tinah Events offers premium event planning, luxury decorations, and mega tents for weddings, parties, and corporate events in Uganda.",
-        "url": "https://tinaheventsug.com/",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+256 700 123 456",
-          "contactType": "customer service",
-          "availableLanguage": ["English", "Luganda"]
-        }
-      }
-    </script>
-
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tinah Events",
+  "image": "https://tinaheventsug.com/images/logo.png",
+  "priceRange": "$$$", // Indicates mid-to-high pricing (adjust as needed)
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot 12, Kampala Road",
+    "addressLocality": "Kampala",
+    "addressRegion": "Central",
+    "postalCode": "256",
+    "addressCountry": "UG"
+  },
+  "description": "Tinah Events offers premium event planning, luxury decorations, and mega tents for weddings, parties, and corporate events in Uganda.",
+  "url": "https://tinaheventsug.com/",
+  "telephone": "+256 700 123 456", // Added at root for Google’s LocalBusiness requirements
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": ["English", "Luganda"] // Kept for language support clarity
+  }
+}
+</script>
     <!-- Canonical URL to Avoid Duplicate Content Issues -->
     <link rel="canonical" href="https://tinaheventsug.com/" />
 
