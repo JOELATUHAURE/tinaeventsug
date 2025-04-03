@@ -74,7 +74,7 @@ const Footer = () => {
           </p>
           <p className="mt-2 text-gray-400">
             Built by{' '}
-            <a href="https://jotek.netlify.app/" className="text-purple-400 hover:underline" target="_blank" rel="noopener noreferrer">
+            <a href="#" className="text-purple-400 hover:underline" target="_blank" rel="noopener noreferrer">
               Atuhaire Joel
             </a>
           </p>
