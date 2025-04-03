@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
-import { faTiktok } from '@fortawesome/free-brands-svg-icons';  // ✅ Corrected import
+import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
@@ -19,26 +19,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/gallery" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  Gallery
-                </Link>
-              </li>
+              <li><Link to="/" className="text-gray-400 hover:text-purple-400 transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-purple-400 transition-colors">About Us</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-purple-400 transition-colors">Services</Link></li>
+              <li><Link to="/gallery" className="text-gray-400 hover:text-purple-400 transition-colors">Gallery</Link></li>
             </ul>
           </div>
 
@@ -77,15 +61,22 @@ const Footer = () => {
                 <Youtube className="h-6 w-6" />
               </a>
               <a href="https://www.tiktok.com/@tinaheventsug01?_t=ZM-8v5knI4x9lN&_r=1" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <FontAwesomeIcon icon={faTiktok} className="h-6 w-6" />  {/* ✅ Corrected */}
+                <FontAwesomeIcon icon={faTiktok} className="h-6 w-6" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <p className="text-center text-gray-400">
+        {/* Footer Bottom Section */}
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p className="text-gray-400">
             © {new Date().getFullYear()} Tinah Decor Events Ug. All rights reserved.
+          </p>
+          <p className="mt-2 text-gray-400">
+            Built by{' '}
+            <a href="https://jotek.netlify.app/" className="text-purple-400 hover:underline" target="_blank" rel="noopener noreferrer">
+              Atuhaire Joel
+            </a>
           </p>
         </div>
       </div>
